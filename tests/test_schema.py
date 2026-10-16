@@ -3,7 +3,6 @@ from pydantic import ValidationError
 from src.schemas import TicketInput, TicketOutput, TicketRecord
 
 def test_valid_ticket_input():
-    # 测试合法的输入数据
     data = {
         "ticket_id": "T001",
         "user_message": "我买的316奶锅收到有划痕，想退款",
@@ -12,10 +11,9 @@ def test_valid_ticket_input():
     }
     ticket = TicketInput(**data)
     assert ticket.ticket_id == "T001"
-    assert ticket.source == "unknown"  # 测试默认值
+    assert ticket.source == "unknown"
 
 def test_valid_ticket_output():
-    # 测试合法的输出数据
     data = {
         "category": "退款售后",
         "priority": "P1",
@@ -29,7 +27,6 @@ def test_valid_ticket_output():
     assert output.requires_human is True
 
 def test_invalid_category_raises_error():
-    # 测试非法的分类枚举值是否会被拦截
     data = {
         "category": "随便写的错误分类",
         "priority": "P1",
@@ -40,10 +37,9 @@ def test_invalid_category_raises_error():
         TicketOutput(**data)
 
 def test_invalid_priority_raises_error():
-    # 测试非法的风险等级是否会被拦截
     data = {
         "category": "商品咨询",
-        "priority": "P999",  # 非法枚举
+        "priority": "P999", 
         "requires_human": False,
         "suggested_reply": "测试"
     }
