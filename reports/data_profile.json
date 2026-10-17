@@ -1,0 +1,34 @@
+{
+    "dataset_size": 500,
+    "null_rates": {
+        "ticket_id": 0.0,
+        "user_message": 0.0,
+        "text_length": 0.0,
+        "category": 0.0,
+        "priority": 0.0,
+        "requires_human": 0.0
+    },
+    "category_distribution": {
+        "退款售后": 120,
+        "商品咨询": 100,
+        "退货换货": 90,
+        "物流异常": 80,
+        "商品质量": 70,
+        "其他/边界": 40
+    },
+    "priority_distribution": {
+        "P2": 500
+    },
+    "requires_human_rate": 0.958,
+    "text_length_statistics": {
+        "mean": 193.23,
+        "min": 55,
+        "max": 327,
+        "P50": 197,
+        "P95": 297
+    },
+    "anomalies": {
+        "too_short_under_10_chars": 0,
+        "too_long_over_500_chars": 0
+    }
+}
