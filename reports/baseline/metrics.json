@@ -1,0 +1,7 @@
+{
+    "total_samples": 500,
+    "category_accuracy": 0.67,
+    "requires_human_recall": 0.4927,
+    "requires_human_precision": 1.0,
+    "requires_human_f1": 0.6601
+}

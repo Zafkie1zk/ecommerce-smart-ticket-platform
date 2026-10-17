@@ -4,9 +4,11 @@ import uuid
 import sys
 from pathlib import Path
 
-# 确保能正确导入 src.schemas
+# 确保能正确导入 src 模块
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from src.schemas import TicketInput, TicketOutput
+# 导入我们刚刚抽离的基线逻辑
+from src.baselines.rule_baseline import simple_rule_baseline
 
 app = FastAPI(
     title="电商智能客服工单处理平台 API",
