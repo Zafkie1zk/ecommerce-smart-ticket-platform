@@ -97,8 +97,8 @@ def convert_excel_to_jsonl(input_excel: str, output_jsonl: str):
     print(f"数据已按照 Pydantic Schema 规范保存至: {output_jsonl}")
 
 if __name__ == "__main__":
-    # 配置输入(你刚生成的Excel) 和 输出(标准的JSONL)
-    INPUT_FILE = "data/raw/ecommerce_dialogues_coherent_500.xlsx"
+    
+    INPUT_FILE = "data/raw/ecommerce_tickets_500_v1.xlsx"
     OUTPUT_FILE = "data/processed/eval_set_v1.jsonl"
     
     convert_excel_to_jsonl(INPUT_FILE, OUTPUT_FILE)

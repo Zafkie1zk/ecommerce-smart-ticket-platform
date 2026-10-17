@@ -19,13 +19,13 @@
     "priority_distribution": {
         "P2": 500
     },
-    "requires_human_rate": 0.958,
+    "requires_human_rate": 0.652,
     "text_length_statistics": {
-        "mean": 193.23,
-        "min": 55,
-        "max": 327,
-        "P50": 197,
-        "P95": 297
+        "mean": 197.878,
+        "min": 64,
+        "max": 410,
+        "P50": 172,
+        "P95": 362
     },
     "anomalies": {
         "too_short_under_10_chars": 0,
