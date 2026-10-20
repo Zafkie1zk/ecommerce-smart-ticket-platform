@@ -1,7 +1,7 @@
 {
-    "total_samples": 500,
-    "category_accuracy": 0.472,
-    "requires_human_recall": 0.6196,
-    "requires_human_precision": 0.9395,
-    "requires_human_f1": 0.7468
+    "total_samples": 100,
+    "category_accuracy": 0.48,
+    "requires_human_recall": 0.6769,
+    "requires_human_precision": 0.9362,
+    "requires_human_f1": 0.7857
 }
