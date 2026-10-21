@@ -26,7 +26,6 @@ INSTRUCTION_TEXT = (
 
 def extract_fine_grained_features(msg: str, category: str):
     """
-    细粒度特征提取引擎：复刻 30 条黄金样本的标注逻辑，拒绝笼统硬编码
     """
     # --- A. 提取商品实体 (Product) ---
     product = "未提及"
@@ -256,7 +255,7 @@ def build_sft_dataset(input_excel: str, golden_json: str, output_jsonl: str):
 
     print(f"正在读取原始数据源: {input_excel}")
 
-    # 2. 加载 30 条人工精标的黄金样本 (建立完美映射)
+    # 2. 加载 30 条人工精标的样本
     golden_map = {}
     if os.path.exists(golden_json):
         with open(golden_json, 'r', encoding='utf-8') as f:
@@ -288,7 +287,7 @@ def build_sft_dataset(input_excel: str, golden_json: str, output_jsonl: str):
             if not user_msg:
                 continue
 
-            # 优先匹配 30 条黄金样本
+            # 优先匹配 30 条
             if user_msg in golden_map:
                 output_dict = golden_map[user_msg]
                 golden_hit_count += 1
