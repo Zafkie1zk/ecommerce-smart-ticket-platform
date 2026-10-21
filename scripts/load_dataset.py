@@ -315,7 +315,7 @@ def build_sft_dataset(input_excel: str, golden_json: str, output_jsonl: str):
             f.write(json.dumps(rec, ensure_ascii=False) + '\n')
 
     print("\n 数据集构建圆满完成！")
-    print(f" 统计明细：总计 {len(final_records)} 条 = 黄金样本命中 {golden_hit_count} 条 + 细粒度引擎精标 {engine_gen_count} 条")
+    print(f" 统计明细：总计 {len(final_records)} 条 = 原样本命中 {golden_hit_count} 条 + 细粒度引擎精标 {engine_gen_count} 条")
     print(f" 输出路径：{output_jsonl}")
 
 if __name__ == "__main__":
