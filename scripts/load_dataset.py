@@ -319,8 +319,8 @@ def build_sft_dataset(input_excel: str, golden_json: str, output_jsonl: str):
 
 if __name__ == "__main__":
 
-    EXCEL_PATH = "data/raw/500_v1.xlsx"
-    GOLDEN_PATH = "data/golden_30_for_review.json"
+    EXCEL_PATH = "data/raw/ecommerce_tickets_500_v1"
+    GOLDEN_PATH = "data/manually_label_data_30.json"
     OUTPUT_PATH = "data/processed/cleaned_tickets.jsonl"
     
     build_sft_dataset(EXCEL_PATH, GOLDEN_PATH, OUTPUT_PATH)
